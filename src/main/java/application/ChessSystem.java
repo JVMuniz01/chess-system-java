@@ -1,9 +1,7 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- */
 
 package application;
-
+import boardgame.Position;
+import java.nio.file.FileSystemNotFoundException;
 /**
  *
  * @author j040v
@@ -11,6 +9,10 @@ package application;
 public class ChessSystem {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        Position pos = new Position(3,5);
+     
+    }
+
+    public ChessSystem() {
     }
 }
