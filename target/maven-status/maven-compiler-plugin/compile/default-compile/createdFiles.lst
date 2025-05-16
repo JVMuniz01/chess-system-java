@@ -1,2 +1,8 @@
-application\ChessSystem.class
+application\UI.class
+chess\ChessMatch.class
+chess\ChessPiece.class
+chess\Color.class
+boardgame\Board.class
 boardgame\Position.class
+application\ChessSystem.class
+boardgame\Piece.class
