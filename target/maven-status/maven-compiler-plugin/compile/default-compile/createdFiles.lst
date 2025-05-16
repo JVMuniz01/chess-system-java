@@ -1,3 +1,4 @@
+chess\pieces\King.class
 application\UI.class
 chess\ChessMatch.class
 chess\ChessPiece.class
@@ -5,4 +6,5 @@ chess\Color.class
 boardgame\Board.class
 boardgame\Position.class
 application\ChessSystem.class
+chess\pieces\Rook.class
 boardgame\Piece.class

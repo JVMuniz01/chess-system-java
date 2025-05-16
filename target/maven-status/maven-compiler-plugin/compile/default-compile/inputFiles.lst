@@ -6,3 +6,5 @@ C:\ws-sts\chess-system\src\main\java\boardgame\Position.java
 C:\ws-sts\chess-system\src\main\java\chess\ChessMatch.java
 C:\ws-sts\chess-system\src\main\java\chess\ChessPiece.java
 C:\ws-sts\chess-system\src\main\java\chess\Color.java
+C:\ws-sts\chess-system\src\main\java\chess\pieces\King.java
+C:\ws-sts\chess-system\src\main\java\chess\pieces\Rook.java
