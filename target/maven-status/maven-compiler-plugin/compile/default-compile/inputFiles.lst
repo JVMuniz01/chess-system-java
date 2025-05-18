@@ -1,6 +1,7 @@
 C:\ws-sts\chess-system\src\main\java\application\ChessSystem.java
 C:\ws-sts\chess-system\src\main\java\application\UI.java
 C:\ws-sts\chess-system\src\main\java\boardgame\Board.java
+C:\ws-sts\chess-system\src\main\java\boardgame\BoardException.java
 C:\ws-sts\chess-system\src\main\java\boardgame\Piece.java
 C:\ws-sts\chess-system\src\main\java\boardgame\Position.java
 C:\ws-sts\chess-system\src\main\java\chess\ChessMatch.java

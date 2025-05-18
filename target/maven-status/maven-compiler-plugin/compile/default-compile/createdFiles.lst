@@ -1,4 +1,5 @@
 chess\pieces\King.class
+boardgame\BoardException.class
 application\UI.class
 chess\ChessMatch.class
 chess\ChessPiece.class
