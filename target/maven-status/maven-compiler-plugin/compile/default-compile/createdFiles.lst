@@ -1,11 +1,13 @@
-chess\pieces\King.class
-boardgame\BoardException.class
 application\UI.class
 chess\ChessMatch.class
 chess\ChessPiece.class
+chess\ChessPosition.class
 chess\Color.class
+chess\pieces\King.class
+boardgame\BoardException.class
 boardgame\Board.class
 boardgame\Position.class
 application\ChessSystem.class
+chess\ChessException.class
 chess\pieces\Rook.class
 boardgame\Piece.class
