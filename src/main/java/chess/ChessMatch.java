@@ -15,6 +15,7 @@ public class ChessMatch {
     private Color currentPlayer;
     private Board board;
     private boolean check;
+    private boolean checkMate;
     
     private List <Piece> piecesOnTheBoard = new ArrayList<>();
     private List <Piece> capturedPieces = new ArrayList<>();
@@ -28,6 +29,9 @@ public class ChessMatch {
     
     public int getTurn(){
         return turn;
+    }
+    public boolean getCheckMate(){
+        return checkMate;
     }
     
     public Color getCurrentPlayer(){
@@ -65,7 +69,12 @@ public class ChessMatch {
             throw new ChessException("You can't put yourself in check");
         }
         check = (testCheck(opponent(currentPlayer))) ? true : false;
-        nextTurn();
+        
+        if(testCheckMate(opponent(currentPlayer))){
+            checkMate = true;
+        }else{
+            nextTurn();
+        }
         return (ChessPiece)capturePiece;
     }
     
@@ -137,6 +146,31 @@ public class ChessMatch {
                 return true;
             }
         }return false;
+    }
+    
+    private boolean testCheckMate(Color color){
+        if(!testCheck(color)){
+            return false;
+        }
+        List<Piece> list = piecesOnTheBoard.stream().filter(x -> ((ChessPiece)x).getColor() == color).collect(Collectors.toList());
+        for(Piece p : list){
+            boolean[][] mat = p.possibleMoves();    //Para cada p piece da list crio a matriz dos movimentos possiveis
+            for(int i = 0; i < board.getRaws();i++){
+                for(int j = 0; j < board.getColumns(); j++){    //looping para percorrer se alguma jogada é válida
+                    if(mat[i][j]){  //Se for true: 
+                        Position source = ((ChessPiece)p).getChessPosition().toPosition();  //Crio a variavel source e target
+                        Position target = new Position(i,j);    //Passo as possibilidades como targete o p como source
+                        Piece capturedPiece = makeMove(source, target); //Chamo o make move para testar se depois do movimento continuarei em check
+                        boolean testCheck = testCheck(color);   //Crio uma variável testCheck recebendo a função testCheck 
+                        undoMove(source, target, capturedPiece);    //undoMove para desfazer o teste feito no makeMove
+                        if(!testCheck){ //Se não está em cheque, retorno false indicando que existe a possibilidade de salvar o Rei
+                            return false;
+                        }
+                    }
+                }
+            }
+        }
+        return true;
     }
     
     private void placeNewPiece(char coluumn, int row, ChessPiece piece){
