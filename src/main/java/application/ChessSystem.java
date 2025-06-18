@@ -40,7 +40,7 @@ public class ChessSystem {
                     captured.add(capturedPiece);
                 }
                 
-            }
+            }         
             catch(ChessException e){
                 System.out.println(e.getMessage());
                 s.nextLine();
