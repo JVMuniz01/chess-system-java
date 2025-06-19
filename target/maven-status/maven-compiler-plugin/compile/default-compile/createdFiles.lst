@@ -4,6 +4,7 @@ chess\ChessMatch.class
 chess\ChessPiece.class
 chess\ChessPosition.class
 chess\Color.class
+chess\pieces\Knight.class
 chess\pieces\King.class
 boardgame\BoardException.class
 chess\pieces\Bishop.class
