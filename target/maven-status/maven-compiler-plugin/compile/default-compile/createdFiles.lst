@@ -6,6 +6,7 @@ chess\ChessPosition.class
 chess\Color.class
 chess\pieces\King.class
 boardgame\BoardException.class
+chess\pieces\Bishop.class
 boardgame\Board.class
 boardgame\Position.class
 application\ChessSystem.class
