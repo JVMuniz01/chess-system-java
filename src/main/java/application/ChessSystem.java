@@ -41,7 +41,11 @@ public class ChessSystem {
                 }
                 if(chessMatch.getPromoted() != null){
                     System.out.println("Enter piece for promotion (B/N/R/Q)");
-                    String type = s.nextLine();
+                    String type = s.nextLine().toUpperCase();
+                    while(!type.equals("B") && !type.equals("N") && !type.equals("R") && !type.equals("Q")){
+                        System.out.println("Invalid value! Enter piece for promotion (B/N/R/Q)");
+                        type = s.nextLine().toUpperCase();
+                    }
                     chessMatch.replacePromotedPiece(type); //no ChessMatch, promoted recebe a rainha mas é aqui que é decidido qual peça será escolhida
                 }
                 

@@ -10,7 +10,6 @@ import chess.pieces.Knight;
 import chess.pieces.Pawn;
 import chess.pieces.Queen;
 import chess.pieces.Rook;
-import java.security.InvalidParameterException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -115,7 +114,7 @@ public class ChessMatch {
             throw new IllegalStateException("Não há peça a ser promovida!");
         }
         if(!type.equals("B") && !type.equals("N") && !type.equals("R") && !type.equals("Q")){ //.equals pois é uma classe e não tipo primitivo
-            throw new InvalidParameterException("Invalid type of promotion");
+            return promoted;
         }
         Position pos = promoted.getChessPosition().toPosition();
         Piece p = board.removePiece(pos);
