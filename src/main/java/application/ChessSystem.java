@@ -39,6 +39,11 @@ public class ChessSystem {
                 if(capturedPiece != null){
                     captured.add(capturedPiece);
                 }
+                if(chessMatch.getPromoted() != null){
+                    System.out.println("Enter piece for promotion (B/N/R/Q)");
+                    String type = s.nextLine();
+                    chessMatch.replacePromotedPiece(type); //no ChessMatch, promoted recebe a rainha mas é aqui que é decidido qual peça será escolhida
+                }
                 
             }         
             catch(ChessException e){
