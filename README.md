@@ -24,3 +24,7 @@ Este é um projeto de sistema de xadrez em Java, desenvolvido com o objetivo de 
 git clone https://github.com/JVMuniz01/chess-system-java.git
 cd chess-system/target/classes
 java application/chessSystem
+```
+## 📜 Licença
+
+Este projeto está licenciado sob os termos da [Licença MIT](./LICENSE).
